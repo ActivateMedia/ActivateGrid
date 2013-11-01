@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"
+		label="COM_ACTIVATEGRID_NAVBAR_BASIC_CONFIG"
+		description="">         
+                <field
+                    name="load_content_dinamically"
+                    type="radio"
+                    class="radio btn-group"
+                    default="1"
+                    label="COM_ACTIVATEGRID_CONFIG_AJAX"
+                    description="COM_ACTIVATEGRID_CONFIG_AJAX_DESC"
+                    required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                <field
+                        name="jquery"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_JQUERY"
+                        description="COM_ACTIVATEGRID_CONFIG_JQUERY_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>                                  
+                <field
+                        name="autocreate_categories"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_CATEGORIES_CREATION"
+                        description="COM_ACTIVATEGRID_CONFIG_CATEGORIES_CREATION_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                
+                <field
+                        name="autopublish_feed"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_FEED_PUBLISHING"
+                        description="COM_ACTIVATEGRID_CONFIG_FEED_PUBLISHING_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>                                  
+	</fieldset>                      
+        
+        <fieldset name="twitter"
+		label="COM_ACTIVATEGRID_CONFIG_TWITTER"
+		description="COM_ACTIVATEGRID_CONFIG_TWITTER_DESC">
+            
+                <field type="spacer" name="twitter_spacer" label="COM_ACTIVATEGRID_CONFIG_TWITTER_H1" />
+            
+                <field
+                name="twitter_consumer_key"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_1"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_1"
+                required="false" />     
+                
+                <field
+                name="twitter_consumer_secret"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_2"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_2"
+                required="false" /> 
+                
+                <field
+                name="twitter_access_token"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_3"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_3"
+                required="false" /> 
+                
+                <field
+                name="twitter_access_secret"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_4"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_4"
+                required="false" /> 
+                
+                <field type="spacer" name="twitter_spacer2" label="COM_ACTIVATEGRID_CONFIG_SCRAPER" />
+            
+                <field
+                        name="twitter_url_replace"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_7"
+                        description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_7_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>             
+                
+                <field
+                name="twitter_username"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_6"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_6_DESC"
+                required="false" />     
+                
+                <field
+                name="twitter_maximum"
+                type="text"
+                class="inputbox"
+                default="10"
+                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM"
+                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM_DESC"
+                required="false"
+                size="2" />
+                
+                <field
+                name="twitter_caching"
+                type="text"
+                class="inputbox"
+                default="60"
+                size="2"
+                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING"
+                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING_DESC"
+                required="false" /> 
+                
+                <field type="spacer" name="twitter_spacer3" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
+            
+                <field
+                        name="twitter_show_date"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_8"
+                        description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_8_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field> 
+                
+                <field
+                        name="twitter_show_actions"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_9"
+                        description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_9_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field> 
+                
+                <field
+                        name="twitter_show_icon"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_10"
+                        description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_10_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                    
+        </fieldset>
+        
+        <fieldset name="instagram"
+		label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM"
+		description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_DESC"
+                addfieldpath="/administrator/components/com_activategrid/models/fields/">
+        
+                <field
+                name="instagram_client_id"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_1"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_1"
+                required="false" />    
+                
+                <field
+                name="instagram_client_secret"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_2"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_2"
+                required="false" />  
+                
+                <field
+                name="instagram_redirect_uri"
+                type="text"
+                class="inputbox"
+                default="http://[YOUR-DOMAIN-HERE]/administrator/index.php?option=com_activategrid"
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_3"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_3_DESC"
+                required="false" />   
+                
+                <field type="spacer" name="instagram_spacer1" label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_AUTH" />
+                
+                <field
+                name="instagram_access_token"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_5"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_5"
+                required="false" />
+                
+                <field
+                name="instagram_username"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_6"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_6"
+                required="false" />  
+                
+                <field type="spacer" name="instagram_spacer2" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
+
+                <field
+                        name="instagram_show_icon"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_7"
+                        description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_7_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                
+                <field type="spacer" name="instagram_spacer3" label="COM_ACTIVATEGRID_CONFIG_SCRAPER" />
+                
+                <field
+                name="instagram_maximum"
+                type="text"
+                class="inputbox"
+                default="10"
+                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM"
+                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM_DESC"
+                required="false"
+                size="2" />
+                
+                <field
+                        name="instagram_pic_save"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_SAVE"
+                        description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_SAVE_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>   
+                
+                <field
+                name="instagram_pic_folder"
+                type="folderlist"
+                directory="images"
+                default="instagram"
+                label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_SAVE_DIR"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_SAVE_DIR_DESC"
+                required="false"
+                 />                                                                                                     
+        </fieldset>
+        
+        <fieldset name="facebook"
+		label="COM_ACTIVATEGRID_CONFIG_FACEBOOK"
+		description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_DESC">
+        
+        
+                <field
+                name="facebook_app_id"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_1"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_1"
+                required="false" />   
+                
+                <field
+                name="facebook_app_secret"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_2"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_2"
+                required="false" />    
+        </fieldset>        
+	
+        <fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+	>
+
+		<field 
+            name="rules" 
+            type="rules"
+			component="com_activategrid"
+            class="inputbox"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+
+</config>

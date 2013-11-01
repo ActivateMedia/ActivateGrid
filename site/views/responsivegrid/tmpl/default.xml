@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ACTIVATEGRID_TITLE_ITEM_VIEW_ARTICLERESPONSIVEGRID" option="View">
+        <message>
+                        <![CDATA[COM_ACTIVATEGRID_TITLE_ITEM_VIEW_ARTICLERESPONSIVEGRID]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic" label="COM_ACTIVATEGRID_SOURCE_CATEGORIES">
+            <field 
+                name="sources_category"
+                query="select * from #__categories where extension='com_content' and published=1 ORDER BY title ASC"
+                type="sql"
+		multiple="true"
+                key_field="title"
+                value_field="title"
+                label="COM_ACTIVATEGRID_SELECT_CATEGORIES"
+                require="true"
+                description="COM_ACTIVATEGRID_SOURCE_CATEGORIES_DESC">
+            </field>
+            
+            <field 
+                name="article_order"
+                type="list"
+		multiple="false"
+                label="COM_ACTIVATEGRID_ARTICLE_ORDER"
+                require="true"
+                default="date_desc"
+                description="COM_ACTIVATEGRID_ARTICLE_ORDER_DESC">
+                    <option value="date_desc">COM_ACTIVATEGRID_ORDER_DATE_DESC</option>
+                    <option value="date_asc">COM_ACTIVATEGRID_ORDER_DATE_ASC</option>
+                    <option value="a-z">COM_ACTIVATEGRID_ORDER_AZ</option>
+                    <option value="z-a">COM_ACTIVATEGRID_ORDER_ZA</option>
+                    <option value="random">COM_ACTIVATEGRID_ORDER_RAND</option>
+                    
+                    
+            </field>
+            
+            <field 
+                name="load_effect"
+                type="list"
+		multiple="false"
+                label="COM_ACTIVATEGRID_LOAD_EFFECT"
+                require="true"
+                default="1"
+                description="COM_ACTIVATEGRID_LOAD_EFFECT_DESC">
+                    <option value="0">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_0</option>
+                    <option value="R">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_RANDOM</option>
+                    <option value="1">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_1</option>
+                    <option value="2">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_2</option>
+                    <option value="3">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_3</option>
+                    <option value="4">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_4</option>
+                    <option value="5">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_5</option>
+                    <option value="6">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_6</option>
+                    <option value="7">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_7</option>
+                    <option value="8">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_8</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>
