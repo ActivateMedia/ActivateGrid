@@ -8,17 +8,21 @@
  */
 // no direct access
 defined('_JEXEC') or die('Restricted access');
+
+echo $this->category_intro;
 ?>
-<div id="container" class="grid effect-<?=$this->load_effect;?> js-masonry" data-masonry-options='{ "columnWidth": 240, "itemSelector": ".item" }'>    
-    <? foreach($this->feedsRow as $feed) :
-      echo $feed."\n";
+
+
+<div id="container" class="grid effect-<?=$this->grid->load_effect;?> js-masonry" data-masonry-options='{ "columnWidth": <?=$this->grid->gridItemWidth;?>, "itemSelector": ".<?=$this->grid->gridItemSelector;?>" }'>    
+    <? foreach($this->grid->feedsRow as $feed) :
+        echo $feed."\n";
     endforeach;
     ?>    
 </div>
 
 <?php 
 
-if($this->load_content_dinamically==1) : ?>
+if($this->grid->load_content_dinamically==1) : ?>
 <script>
 $(document).ready(function(){
         new AnimOnScroll( document.getElementById( 'container' ), {

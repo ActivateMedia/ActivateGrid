@@ -87,7 +87,9 @@ class ActivategridViewAdvancedsettings extends JViewLegacy
                 JToolBarHelper::title(JText::_('COM_ACTIVATEGRID')." / ".JText::_('COM_ACTIVATEGRID_ADVANCED_CONFIGURATION'), 'activates.png');
                 JToolBarHelper::custom('config','save','','Save',false);
                 //JToolBarHelper::save('activategrid.save');
-                JToolBarHelper::preferences('com_activategrid');
+                JToolBarHelper::preferences('com_activategrid','','','Basic Options');
+                JToolBarHelper::back();
+                JToolBarHelper::help('activatemedia', 'com_activategrid');
 	}
         
 }

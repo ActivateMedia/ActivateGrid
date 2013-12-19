@@ -15,7 +15,9 @@ class com_activategridInstallerScript
         function install($parent) 
         {
             self::generateSocialColorPalette();
-            self::createInstagramDirectory();
+            self::createImageDirectory("instagram");
+            self::createImageDirectory("facebook");
+            self::createImageDirectory("storify");
             $parent->getParent()->setRedirectURL('index.php?option=com_activategrid');
         }
  
@@ -37,7 +39,9 @@ class com_activategridInstallerScript
         function update($parent) 
         {
             self::generateSocialColorPalette();
-            self::createInstagramDirectory();
+            self::createImageDirectory("instagram");
+            self::createImageDirectory("facebook");
+            self::createImageDirectory("storify");
             echo '<div class="alert alert-info">';
             echo '  <p>' . JText::_('COM_ACTIVATEGRID_UPDATE_TEXT').' to the version: '.$parent->get('manifest')->version. '</p>';
             echo '</div>';
@@ -64,13 +68,16 @@ class com_activategridInstallerScript
          */
         function postflight($type, $parent) 
         {
-           
+            /* I fix lft and rgt attribute in the #__categories for the created categories */
+            self::fixCategoryAttributes();
         }
         
         function generateSocialColorPalette()
         {
             $socialnetowks_default_color = array("twitter"   => "#201f1f",
-                                                 "instagram" => "#5e4439");
+                                                 "instagram" => "#5e4439",
+                                                 "facebook" => "#3B5998",
+                                                 "storify" => "#DFE5EA");
             
             $db = JFactory::getDBO();
 
@@ -110,9 +117,9 @@ class com_activategridInstallerScript
             else return false; // not exists
         }
         
-        function createInstagramDirectory()
+        function createImageDirectory($name)
         {
-            $images_directory = JPATH_ROOT.DS."images".DS."instagram".DS;
+            $images_directory = JPATH_ROOT.DS."images".DS.$name.DS;
             self::makeDir($images_directory);
         }
         
@@ -129,5 +136,28 @@ class com_activategridInstallerScript
                 echo "<pre>".print_r($str,true)."</pre>";
             else
                 echo "<pre>".$str."</pre>";
+        }
+        
+                /* this fix lft and rgt attribute in the #__categories for the created categories */
+        public static function fixCategoryAttributes()
+        {
+            $db = JFactory::getDBO();
+            $query = "SELECT MAX(rgt) FROM #__categories";
+            $db->setQuery($query);
+            $rgt = $db->loadResult();
+
+            $query = "SELECT id FROM #__categories WHERE lft = 0 AND rgt = 0 AND parent_id = 1";
+            $db->setQuery($query);
+            $elements = $db->loadObjectList();
+
+            foreach($elements as $categoryToFix)
+            {                    
+                $tmpLFT = $rgt+1;
+                $tmpRGT = $tmpLFT+1;
+                $query = "UPDATE #__categories SET lft = $tmpLFT, rgt = $tmpRGT WHERE id = ".$categoryToFix->id;
+                $db->setQuery($query);
+                $db->execute();
+                $rgt++;
+            }            
         }
 }

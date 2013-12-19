@@ -29,11 +29,14 @@ class ActivategridViewFeeds extends JViewLegacy
 	{
 		$this->state	= $this->get('State');
 		$this->item	= $this->get('Item');
-		$this->form	= $this->get('Form');
+		$this->form	= $this->get('Form');                                                
                 
                 self::printButtons();
+                
+                ActivategridHelper::get_storify();
                 ActivategridHelper::get_twitter();
                 ActivategridHelper::get_instagram();
+                ActivategridHelper::get_facebook();
                 self::printButtons();
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) {

@@ -1,17 +1,14 @@
-body {
-    margin: 0;
-    padding: 0 !important;
+body {   
     width: 100%;
-    max-width: 100%;        
-}
-
-.the-container {
-    margin-left: 255px !important;
+    max-width: 100%;    
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+    
 }
 
 .article_div_img {
     width: 100%;
-    height: 350px;
+    height: 450px;
     background-position: center;
 }
 
@@ -49,13 +46,13 @@ body {
 
 .title {
     color: #fff;
-    font-size: 35px;
     text-align: center;
     padding: 0;
     line-height: 30px;
-    font-family: "Times New Roman";
+    font-family: 'Libre Baskerville', serif;
     font-size: 30px;
     text-transform:uppercase;
+	font-weight: 400;
 }
 
 .date {
@@ -65,26 +62,92 @@ body {
     padding: 10px;
     margin: 0 20px 0 20px;
     line-height: 18px;
-    font-family: "Times New Roman";
+    font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
     font-size: 18px;
     text-transform:uppercase;
 }
 
-.social-networks{
+@media (max-width: 480px) {
+    .article_div .category {
+        font-size: 20px;
+    }
+    
+    .article_div .title {
+        line-height: 40px;
+        font-size: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.social-networks {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.social-networks img 
+{
+    padding: 5px;
 }
 
 .pageslide_stores {
     
     background-color: lightblue;
 }
-/*
-.content p {
-   padding: 0 50px 0 50px; 
-   color: #fff;
-   font-size: 25px;
-   line-height: 30px;
-}*/
+
+.store-details
+{
+    text-align: center;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.store-address
+{
+    color: #fff;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.store-telephone
+{
+    color: #fff; 
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.store-website, .store-website a
+{
+    color: #b29758;
+    display: inline;
+}
+.store-website a:hover
+{
+    text-decoration: underline;
+}
+
+.store-email, .store-email a  
+{
+    color: #b29758;
+    display: inline;
+}
+.store-email a:hover
+{
+    text-decoration: underline;
+}
+
+.store-details-divider
+{
+    color: #b29758;
+    display: inline;
+    padding: 0 10px;
+}
 
 .article_div {
     background-image: url(../images/noisy-texture.png);
@@ -108,4 +171,62 @@ body {
 .date {
 	font-size: 18px;
 	font-family: 'Nunito', sans-serif;
+}
+
+.content {
+	font-family: 'Nunito', sans-serif;
+	color: #fff;
+	font-size: 19px;
+	font-weight: 200;
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px 0 60px 0;
+	text-align: left;
+	line-height: 28px;
+}
+
+.content a
+{
+    color: #b29758;
+}
+
+.content h2
+{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.content h3
+{
+    text-align:left;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 15px;
+    font-size: 20px;    
+    text-transform: uppercase;
+    margin-top: 15px;
+    color: #b29758;
+    font-weight: 200;
+}
+
+.at-vertical-menu {
+    top: 460px;
+    position: absolute;
+}
+
+.article_div
+{
+    position: relative;    
+}
+
+.back-button {
+    width: 50px;
+    height: 50px;
+    border: solid 1px black;
+    position: absolute;
+    top: 450px;
+    left: 0px;
 }

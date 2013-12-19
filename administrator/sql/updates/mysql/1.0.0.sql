@@ -23,3 +23,12 @@ WHERE NOT EXISTS(
     FROM #__categories 
     WHERE alias = "facebook"
 );
+
+
+INSERT INTO #__categories (parent_id, extension, title, alias, path, published, level, access, created_time, language)        
+SELECT * FROM (SELECT 1 as parent_id, 'com_content', 'Storify' as t, 'storify' as a, 'storify' as p, 1 as published, 1 as level, 1 as access, NOW(), '*') AS tmp
+WHERE NOT EXISTS(     
+    SELECT id   
+    FROM #__categories 
+    WHERE alias = "facebook"
+);

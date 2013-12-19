@@ -55,12 +55,14 @@
                                 value="1">JYES</option>
                         <option
                                 value="0">JNO</option>
-                </field>                                  
+                </field> 
+                
+                <field type="spacer" name="goto_advanced_settings" label="COM_ACTIVATEGRID_CONFIG_GOTO_ADVANCED_OPTIONS" />
 	</fieldset>                      
         
         <fieldset name="twitter"
 		label="COM_ACTIVATEGRID_CONFIG_TWITTER"
-		description="COM_ACTIVATEGRID_CONFIG_TWITTER_DESC">
+		description="COM_ACTIVATEGRID_CONFIG_TWITTER_DESC_IMG">
             
                 <field type="spacer" name="twitter_spacer" label="COM_ACTIVATEGRID_CONFIG_TWITTER_H1" />
             
@@ -88,7 +90,7 @@
                 class="inputbox"
                 default=""
                 label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_3"
-                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_3"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_3_DESC"
                 required="false" /> 
                 
                 <field
@@ -97,7 +99,7 @@
                 class="inputbox"
                 default=""
                 label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_4"
-                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_4"
+                description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_4_DESC"
                 required="false" /> 
                 
                 <field type="spacer" name="twitter_spacer2" label="COM_ACTIVATEGRID_CONFIG_SCRAPER" />
@@ -135,7 +137,7 @@
                 required="false"
                 size="2" />
                 
-                <field
+               <!-- <field
                 name="twitter_caching"
                 type="text"
                 class="inputbox"
@@ -143,7 +145,7 @@
                 size="2"
                 label="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING"
                 description="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING_DESC"
-                required="false" /> 
+                required="false" /> -->
                 
                 <field type="spacer" name="twitter_spacer3" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
             
@@ -193,7 +195,7 @@
         
         <fieldset name="instagram"
 		label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM"
-		description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_DESC"
+		description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_DESC_IMG"
                 addfieldpath="/administrator/components/com_activategrid/models/fields/">
         
                 <field
@@ -230,7 +232,7 @@
                 type="text"
                 class="inputbox"
                 label="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_5"
-                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_5"
+                description="COM_ACTIVATEGRID_CONFIG_INSTAGRAM_LBL_5_DESC"
                 required="false" />
                 
                 <field
@@ -296,7 +298,7 @@
         
         <fieldset name="facebook"
 		label="COM_ACTIVATEGRID_CONFIG_FACEBOOK"
-		description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_DESC">
+		description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_DESC_IMG">
         
         
                 <field
@@ -315,8 +317,189 @@
                 default=""
                 label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_2"
                 description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_2"
+                required="false" />   
+                
+            <field type="spacer" name="facebook_spacer1" label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_AUTH" />
+                
+                <field
+                name="facebook_access_token"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_4"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_4_DESC"
+                required="false" />
+                
+                <field
+                name="facebook_username"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_5"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_5"
+                required="false" />  
+
+                <field
+                name="facebook_username_id"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_6"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_6"
+                required="false" />                  
+                                
+                <field type="spacer" name="facebook_spacer2" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
+
+                <field
+                        name="facebook_show_icon"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_7"
+                        description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_LBL_7_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                
+                <field type="spacer" name="facebook_spacer3" label="COM_ACTIVATEGRID_CONFIG_SCRAPER" />
+                
+                <field
+                name="facebook_maximum"
+                type="text"
+                class="inputbox"
+                default="10"
+                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM"
+                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM_DESC"
+                required="false"
+                size="2" />
+                
+                <field
+                        name="facebook_pic_save"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_SAVE"
+                        description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_SAVE_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>   
+                
+                <field
+                name="facebook_pic_folder"
+                type="folderlist"
+                directory="images"
+                default="facebook"
+                label="COM_ACTIVATEGRID_CONFIG_FACEBOOK_SAVE_DIR"
+                description="COM_ACTIVATEGRID_CONFIG_FACEBOOK_SAVE_DIR_DESC"
+                required="false"
+                 />                             
+        </fieldset>   
+        
+             
+        <fieldset name="storify"
+		label="COM_ACTIVATEGRID_CONFIG_STORIFY"
+		description="COM_ACTIVATEGRID_CONFIG_STORIFY_DESC_IMG"
+                addfieldpath="/administrator/components/com_activategrid/models/fields/">
+
+                <field
+                name="storify_api_key"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_0"
                 required="false" />    
-        </fieldset>        
+                    
+                <field
+                name="storify_username"
+                type="text"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_1"
+                description="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_1_DESC"
+                required="false" />    
+                
+                <field
+                name="storify_password"
+                type="password"
+                class="inputbox"
+                default=""
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_2"
+                description="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_2_DESC"
+                required="false" />                   
+                
+                <field type="spacer" name="storify__spacer1" label="COM_ACTIVATEGRID_CONFIG_STORIFY_AUTH" />
+                
+                <field
+                name="storify_token"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_3"
+                description="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_3_DESC"
+                required="false" />   
+                
+                <field
+                name="storify_website"
+                type="text"
+                class="inputbox"
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_4"
+                description="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_4"
+                required="false" />  
+                
+                <field type="spacer" name="instagram_spacer2" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
+
+                <field
+                        name="storify_show_icon"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_5"
+                        description="COM_ACTIVATEGRID_CONFIG_STORIFY_LBL_5_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>
+                
+                <field type="spacer" name="instagram_spacer3" label="COM_ACTIVATEGRID_CONFIG_SCRAPER" />
+                
+                <field
+                name="storify__maximum"
+                type="text"
+                class="inputbox"
+                default="10"
+                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM"
+                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_MAXIMUM_DESC"
+                required="false"
+                size="2" />
+                
+                <field
+                        name="storify_pic_save"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_STORIFY_SAVE"
+                        description="COM_ACTIVATEGRID_CONFIG_STORIFY_SAVE_DESC"
+                        required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>   
+                
+                <field
+                name="storify_pic_folder"
+                type="folderlist"
+                directory="images"
+                default="storify"
+                label="COM_ACTIVATEGRID_CONFIG_STORIFY_SAVE_DIR"
+                description="COM_ACTIVATEGRID_CONFIG_STORIFY_SAVE_DIR_DESC"
+                required="false"
+                 />                                                                                                
+        </fieldset>                       
 	
         <fieldset name="permissions"
 		description="JCONFIG_PERMISSIONS_DESC"

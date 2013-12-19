@@ -6,7 +6,40 @@
         </message>
     </layout>
     <fields name="params">
-        <fieldset name="basic" label="COM_ACTIVATEGRID_SOURCE_CATEGORIES">
+        <fieldset name="basic" label="COM_ACTIVATEGRID_MENUCONFIG">            
+            <field 
+                name="griditem_width"
+                query="select * from #__categories where extension='com_content' and published=1 ORDER BY title ASC"
+                type="text"
+                class="inputbox"
+                default="240"
+                size="4"
+                label="COM_ACTIVATEGRID_GRIDITEM_WIDTH"
+                require="true"
+                description="COM_ACTIVATEGRID_GRIDITEM_WIDTH_DESC">
+            </field>
+            
+            <field 
+                name="griditem_height"
+                type="text"
+                class="inputbox"
+                default="350"
+                label="COM_ACTIVATEGRID_GRIDITEM_HEIGHT"
+                require="true"
+                size="4"
+                description="COM_ACTIVATEGRID_GRIDITEM_HEIGHT_DESC">
+            </field>
+            
+            <field 
+                name="griditem_selector"
+                type="text"
+                class="inputbox"
+                default="gridItem"
+                label="COM_ACTIVATEGRID_GRIDITEM_SELECTOR"
+                require="true"
+                description="COM_ACTIVATEGRID_GRIDITEM_SELECTOR_DESC">
+            </field>
+                        
             <field 
                 name="sources_category"
                 query="select * from #__categories where extension='com_content' and published=1 ORDER BY title ASC"
@@ -54,6 +87,46 @@
                     <option value="6">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_6</option>
                     <option value="7">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_7</option>
                     <option value="8">COM_ACTIVATEGRID_LOAD_EFFECT_NAME_8</option>
+            </field>
+            
+            <field
+                    name="show_category_title"
+                    type="radio"
+                    class="radio btn-group"
+                    default="0"
+                    label="COM_ACTIVATEGRID_CATEGORY_TITLE_SHOW"
+                    description="COM_ACTIVATEGRID_CATEGORY_TITLE_SHOW_DESC"
+                    required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+            </field>
+            
+            <field
+                    name="show_category_intro"
+                    type="radio"
+                    class="radio btn-group"
+                    default="0"
+                    label="COM_ACTIVATEGRID_CATEGORY_INTRO_SHOW"
+                    description="COM_ACTIVATEGRID_CATEGORY_INTRO_SHOW_DESC"
+                    required="true">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+            </field>
+            
+            <field 
+                name="source_category_intro"
+                query="select * from #__categories where extension='com_content' and published=1 ORDER BY title ASC"
+                type="sql"
+		multiple="false"
+                key_field="id"
+                value_field="title"
+                label="COM_ACTIVATEGRID_CATEGORY_INTRO_SOURCE"
+                require="true"
+                description="COM_ACTIVATEGRID_CATEGORY_INTRO_SOURCE_DESC">
             </field>
         </fieldset>
     </fields>

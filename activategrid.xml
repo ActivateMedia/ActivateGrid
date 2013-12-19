@@ -7,7 +7,7 @@
     <author>Andrea Falzetti</author>
     <authorEmail>info@activatemedia.co.uk</authorEmail>
     <authorUrl>http://activatemedia.co.uk</authorUrl>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <description>A Joomla plugin that utilises jquery masonry to create a responsive grid layout for articles and selected social media</description>
        
     <scriptfile>script.php</scriptfile>

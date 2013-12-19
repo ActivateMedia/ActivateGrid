@@ -14,16 +14,54 @@ $full_image = $images->image_fulltext;
 
 echo "<div class='article_div' style='background-color:".$this->bgcolor->value."'>\n";
 
-?>
-<div class="article_div_img" style="background-image:url(<?=$full_image;?>);"></div>
 
-<?php            
-    echo "<div class='category'>".$this->article->category_name."</div>\n";
+if(!empty($full_image)): ?><div class="article_div_img" style="background-image:url(<?=$full_image;?>);"></div><?php endif; ?>
+<div class="back-button" onclick="window.history.back()">X</div>
+<?php                
+    echo "<div class='content'>\n";
+    echo "<div class='category'>".$this->article->category_name."</div>\n";            
     echo "<div class='title'>".$this->article->title."</div>\n";
-    echo "<div class='date'>".date("F Y", strtotime($this->article->created))."</div>\n";
-    echo "<div class='social-networks'>".$this->extrafields_html."</div>\n";
-    if(!empty($this->article->fulltext)) echo "<div class='content'>".$this->article->fulltext."</div>\n";
-    else echo "<div class='content'>".$this->article->introtext."</div>\n";
+    if(isset($this->store_details_html)) echo $this->store_details_html;
+    if(isset($this->article->date)) echo "<div class='date'>".$this->article->date."</div>\n";
+    if(!empty($this->extrafields_html)) echo "<div class='social-networks'>".$this->extrafields_html."</div>\n";
+    if(!empty($this->article->fulltext)) echo $this->article->fulltext."\n";
+    else echo $this->article->introtext."\n";
+    echo "</div>\n";
 ?>
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript">
+    //var addthis_config = {                                                    
+                          //services_exclude: 'print,stumbleupon'
+      //                   };
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5273d67a5c03c75a"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'right',
+      'numPreferredServices' : 6,
+      'services' : 'facebook,twitter,pinterest,tumblr,google_plusone_share,more'
+    }
+  });
+</script>
+<!-- AddThis Smart Layers END -->
 
-</div>
+<?php
+/* If there isn't the top image I change some css */
+if(empty($full_image)):
+?>
+<style>
+    .back-button
+    {
+        top: 0;
+    }
+    .at-vertical-menu
+    {
+        top: 50px;
+    }
+</style>
+<? endif; ?>
+
+<!--</div>-->

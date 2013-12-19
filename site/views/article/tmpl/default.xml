@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ACTIVATEGRID_VIEW_ARTICLE" option="View">
+        <message>
+                        <![CDATA[COM_ACTIVATEGRID_VIEW_ARTICLE]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic" label="COM_ACTIVATEGRID_SOURCE_CATEGORIES">
+            <field 
+                name="source_article"
+                query="select * from #__content where state=1 ORDER BY title ASC"
+                type="sql"
+		multiple="false"
+                key_field="id"
+                value_field="title"
+                label="COM_ACTIVATEGRID_SELECT_ARTICLE"
+                require="true"
+                description="COM_ACTIVATEGRID_SELECT_ARTICLE_DESC">
+            </field>            
+        </fieldset>
+    </fields>
+</metadata>

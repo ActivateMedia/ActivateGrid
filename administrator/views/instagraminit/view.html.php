@@ -78,7 +78,7 @@ class ActivategridViewInstagraminit extends JViewLegacy
                     ));
 
                     $data = $instagram->getOAuthToken($code);
-                    echo "<pre>".print_r($data,true)."</pre>";
+                    //echo "<pre>".print_r($data,true)."</pre>";
                                         
                     if(isset($data->error_type))
                     {
@@ -93,7 +93,10 @@ class ActivategridViewInstagraminit extends JViewLegacy
                         $username = $data->user->username;
                         ActivategridHelper::instagramStoreAccessToken($accessToken);
                         ActivategridHelper::instagramStoreUsername($username);
-                        header("location: ".JURI::root()."administrator/index.php?option=com_config&view=component&component=com_activategrid");
+                        ActivategridHelper::displayMessage("message", @JText::_(COM_ACTIVATEGRID_CONFIG_AUTHORIZE_OK));
+                        echo @JText::_(COM_ACTIVATEGRID_CONFIG_AUTHORIZE_ACTIONS);
+                        
+                        //header("location: ".JURI::root()."administrator/index.php?option=com_config&view=component&component=com_activategrid");
                     }
                     
                 }
