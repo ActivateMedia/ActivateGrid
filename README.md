@@ -85,7 +85,7 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <p>&nbsp;</p>
 <h3>2.2 Setup<br />
 </h3>
-<img src="images/grid-helper-1.png" alt="Helper-1" width="631" height="147" />
+<img src="http://activatemedia.co.uk/img/grid-helper-1.png" alt="Helper-1" width="631" height="147" />
 <p>The image above  summarizes the process of how the <strong>ActivateGrid</strong> works.  The extension needs the provider's api key for proper  connection and to import your feed items.</p>
 <p>Below, you will  find instructions on how to request api keys for: Facebook, Twitter,  Instagram and Storify.</p>
 <p>&nbsp;</p>
