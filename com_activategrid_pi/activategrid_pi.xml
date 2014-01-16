@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_activategrid_pi</name>
+    <creationDate>2013-10-17</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Andrea Falzetti</author>
+    <authorEmail>info@activatemedia.co.uk</authorEmail>
+    <authorUrl>http://activatemedia.co.uk</authorUrl>
+    <version>1.0.0</version>
+    <description>This component is part of ActivateGrid - Joomla! Component and it will allow you to create an URL to set in to a cron job script in order to import automatically the feed items</description>
+
+	<scriptfile>script.php</scriptfile>
+	
+	<administration>
+            <languages folder="administrator">
+                <language tag="en-GB">language/en-GB.com_activategrid_pi.ini</language>
+                <language tag="en-GB">language/en-GB.com_activategrid_pi.sys.ini</language>
+            </languages>
+	</administration>
+    
+	<files folder="site">
+        <filename>index.html</filename>
+        <filename>activategrid_pi.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>libs</folder>
+        <folder>helpers</folder>
+    </files>
+    
+    <languages folder="site">        
+        <language tag="en-GB">language/en-GB.com_activategrid_pi.ini</language>
+    </languages>    
+    
+    
+</extension>

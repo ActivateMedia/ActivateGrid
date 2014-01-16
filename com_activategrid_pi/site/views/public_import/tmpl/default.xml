@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ACTIVATEGRID_PI_VIEW_PUBLIC_IMPORT_NAME" option="View">
+        <message>
+                        <![CDATA[COM_ACTIVATEGRID_PI_VIEW_PUBLIC_IMPORT_NAME]]>
+        </message>
+    </layout> 
+</metadata>

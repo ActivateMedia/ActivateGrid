@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013 Activate Media (http://activatemedia.co.uk). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>activategrid ActivateGrid</name>
+	<author>Activate Media</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Copyright (c) 2013 activategrid. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@activatemedia.co.uk</authorEmail>
+	<authorUrl>http://activatemedia.co.uk</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+	This module is an extension of the ActivateGrid component
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_activategrid">mod_activategrid.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_activategrid.ini</language>
+		<language tag="en-GB">en-GB.mod_activategrid.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <field 
+                                name="gridMenuItemid"
+                                query="SELECT id,title FROM #__menu WHERE published = 1 AND component_id = (SELECT extension_id FROM `#__extensions` WHERE name = 'com_activategrid')"
+                                type="sql"
+                                multiple="false"
+                                size="4"
+                                key_field="id"
+                                value_field="title"
+                                label="MOD_ACTIVATEGRID_GRIDMENU_ITEMID"
+                                require="true"
+                                description="MOD_ACTIVATEGRID_GRIDMENU_ITEMID_DESC">
+                            </field>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

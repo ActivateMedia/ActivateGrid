@@ -1,0 +1,136 @@
+/* Fix overlaps of layers of slider and colorpickers */
+.ui-slider .ui-slider-range, .ui-slider .ui-slider-handle {
+    z-index: 0 !important;
+}
+
+.switch_area {
+    margin-bottom: 10px;
+}
+.switches span {
+    font-size: 12px;
+    display: block;
+    color: red;
+    margin-bottom: 20px;
+}
+.switches {
+    margin: 0 0 0 20px;
+}
+
+.gridItem {
+    width: 200px;
+    height: 400px;
+    border: solid 1px red;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid .gridItem img {
+    width: 200px;
+}
+
+.icon-container {
+    position: absolute !important;
+    bottom: 30px !important;
+    margin-left: -100px !important;
+    left: 50% !important;
+    width: 200px !important;
+}
+
+img.icon-storify {
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+}
+img.icon-facebook {
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+}
+img.icon-twitter {
+    width: 35px !important;
+    height: 29px !important;
+    max-width: 35px !important;
+    max-height: 29px !important;
+}
+img.icon-instagram {
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+}
+
+/*.gridItem:hover {   
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;  Safari 
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);  Safari 
+}*/
+
+.gridItem span {
+    background: url(../images/logo_activate_media.png) center center no-repeat;
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-size: cover !important;
+}
+
+.gridItem .category {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px 10px 0px 10px;
+    margin-bottom: 0px;
+    font-weight: 200;
+}
+
+.gridItem .text {
+    margin: 10px;
+}
+
+.span1 input {
+    width: 100px;
+    color: #000000 !important;
+    /*text-shadow: 1px 1px #ffffff;*/
+    font-weight: bold;
+    text-align: center;
+}
+
+.colorpicker_field input,
+.colorpicker_hex input {
+        background-color: transparent !important;
+	border: 1px solid transparent !important;
+	position: absolute !important;
+	font-size: 10px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	color: #898989 !important;
+	top: 4px !important;
+	right: 11px !important;
+	text-align: right !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 11px !important;
+        width: auto !important;
+        line-height: 10px !important;
+}
+
+.cat_bg_color {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.cat_title_color
+{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.cat_text_color
+{
+    padding: 10px;
+    font-size: 18px;
+}

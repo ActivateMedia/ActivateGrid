@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_activategrid</name>
+    <creationDate>2013-10-17</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Andrea Falzetti</author>
+    <authorEmail>info@activatemedia.co.uk</authorEmail>
+    <authorUrl>http://activatemedia.co.uk</authorUrl>
+    <version>3.0.0</version>
+    <description>A Joomla plugin that utilises jquery masonry to create a responsive grid layout for articles and selected social media</description>
+       
+    <scriptfile>script.php</scriptfile>
+        
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>activategrid.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">        
+        <language tag="en-GB">language/en-GB.com_activategrid.ini</language>
+    </languages>
+    <administration>		
+		<menu img="class:activategrid">COM_ACTIVATEGRID</menu>
+                <submenu>
+                        <!--
+                                Note that all & must be escaped to &amp; for the file to be valid
+                                XML and be parsed by the installer
+                        -->
+                        <menu link="option=com_activategrid" view="banners" img="class:activategrid"
+                                alt="Activate Grid/Setup">com_activategrid_submenu_1</menu>
+                        <menu link="option=com_activategrid&amp;view=advancedsettings"
+                                view="advancedsettings" img="class:activategrid-settings" alt="Activate Grid/Style">com_activategrid_submenu_2</menu>
+						<menu link="option=com_activategrid&amp;view=feeds"
+                                view="feeds" img="class:activategrid-feeds" alt="Activate Grid/Import feed items">com_activategrid_submenu_3</menu>
+                </submenu>
+				
+						
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>activategrid.php</filename>   
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>help</folder>
+            <folder>libs</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>           
+        </files>
+        <languages folder="administrator">            
+            <language tag="en-GB">language/en-GB.com_activategrid.ini</language>
+            <language tag="en-GB">language/en-GB.com_activategrid.sys.ini</language>
+        </languages>
+    </administration>
+    
+    <media destination="com_activategrid" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <file>index.html</file>
+    </media>
+</extension>

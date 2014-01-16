@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<extension version="3.0" type="package">
+	<name>ActivateGrid</name>
+	<author>Activate Media</author>
+	<creationDate>January 2014</creationDate>
+	<packagename>activategrid</packagename>
+	<version>1.0.0</version>
+	<url>http://activatemedia.co.uk</url>
+	<packager>Activate Media</packager>
+	<packagerurl>http://activatemedia.co.uk</packagerurl>
+	<description>ActivateGrid Joomla! Extension</description>
+	<files folder="packages">
+		<file type="component" id="com_activategrid" >com_activategrid.zip</file>
+		<file type="component" id="com_activategrid_pi">com_activategrid_pi.zip</file>
+		<file type="module" id="mod_activategrid" client="site">mod_activategrid.zip</file>
+	</files>
+ </extension>

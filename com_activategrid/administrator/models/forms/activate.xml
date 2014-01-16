@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<field id="image"
+  name="enter field name"
+  type="media"
+  label="Select Image"
+  description=""
+  class="inputbox"
+  directory="Enter the image path here" 
+/>
