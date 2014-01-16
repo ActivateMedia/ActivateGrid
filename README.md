@@ -1,9 +1,9 @@
 activate-grid
 =============
 
-A Joomla! plugin that utilises jquery masonry to create a responsive grid layout for articles and selected social media
+A Joomla! extension that utilises jquery masonry to create a responsive grid layout for articles and selected social media
 
-<h1>ActivateGrid Component</h1>
+<h1>ActivateGrid - Joomla! Component</h1>
 <h2>Guide</h2>
 <h2>Table of contents</h2>
 <ul>
@@ -92,33 +92,17 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <h4>2.2.1 Services</h4>
 <p>The supported  services are:</p>
 <ol>
-	<li>
-		<p><strong>Facebook</strong> (user timeline and pages) </p>
-	</li>
-	<li>
-		<p><strong>Twitter</strong> </p>
-	</li>
-	<li>
-		<p><strong>Instagram</strong> </p>
-	</li>
-	<li>
-		<p><strong>Storify</strong> </p>
-	</li>
+	<li>		<strong>Facebook</strong> (user timeline and pages) </li>
+	<li>		<strong>Twitter</strong> </li>
+	<li>		<strong>Instagram</strong> </li>
+	<li>		<strong>Storify</strong> </li>
 </ol>
 <p>The services  that will be added in the future include:</p>
 <ol>
-	<li>
-		<p>Google+ </p>
-	</li>
-	<li>
-		<p>YouTube </p>
-	</li>
-	<li>
-		<p>LinkedIn </p>
-	</li>
-	<li>
-		<p>Pinterest </p>
-	</li>
+	<li>		Google+ </li>
+	<li>		YouTube </li>
+	<li>		LinkedIn </li>
+	<li>		Pinterest </li>
 	<li>Flickr</li>
 </ol>
 <p>If you decide to  use one of the currently available social networks for the component,  you need to <strong>request</strong> the relative <strong>API Key</strong> for the provider (Facebook, Twitter, etc), then go to: <strong>Components</strong> -&gt; <strong>Activate Grid</strong> -&gt; <strong>Setup</strong> -&gt; <em>Tab to the provider you want to  use</em>.</p>
@@ -127,179 +111,87 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <h3>Generate and set API keys</h3>
 <h4>Facebook</h4>
 <ol>
-	<li>
-		<p>Go to <span lang="zxx" xml:lang="zxx"><U><a href="https://developers.facebook.com/">developers.facebook.com</a></U></span>,  	login or sign up. </p>
-	</li>
-	<li>
-		<p>Click on  	&quot;<strong>Apps</strong>&quot;  	in the top menu. </p>
-	</li>
-	<li>
-		<p>Click  	&quot;<strong>+Create app</strong>&quot;,  	insert &quot;<em>ActivateGrid</em>&quot;  	as <strong>name</strong> and press <strong>Continue</strong> </p>
-	</li>
-	<li>
-		<p>Go in  to App  	Settings and <strong>disable</strong> the &quot;<strong>Sandbox mode,</strong>&quot;  	then <strong>save</strong>. </p>
-	</li>
-	<li>
-		<p>At the top of  	the page you will find your <strong>App  	ID </strong>and <strong>App  	Secret</strong>.  These need to be  	copied and pasted into the appropriate fields.</p>
-	</li>
-	<li>
-		<p>Open your  	Joomla! Administrator panel, login and open the component options:</p>
-	</li>
+	<li>		Go to <span lang="zxx" xml:lang="zxx"><U><a href="https://developers.facebook.com/">developers.facebook.com</a></U></span>,  	login or sign up. </li>
+	<li>		Click on  	&quot;<strong>Apps</strong>&quot;  	in the top menu. </li>
+	<li>		Click  	&quot;<strong>+Create app</strong>&quot;,  	insert &quot;<em>ActivateGrid</em>&quot;  	as <strong>name</strong> and press <strong>Continue</strong> </li>
+	<li>		Go in  to App  	Settings and <strong>disable</strong> the &quot;<strong>Sandbox mode,</strong>&quot;  	then <strong>save</strong>. </li>
+	<li>		At the top of  	the page you will find your <strong>App  	ID </strong>and <strong>App  	Secret</strong>.  These need to be  	copied and pasted into the appropriate fields.</li>
+	<li>		Open your  	Joomla! Administrator panel, login and open the component options:</li>
 </ol>
-<p><br />
-</p>
-<p> (Administrator  panel &gt; Components &gt; Activategrid &gt; Setup)<br />
-</p>
+<br />
+(Administrator  panel &gt; Components &gt; Activategrid &gt; Setup)<br />
 <ol start="7">
 	<li>
-		<p>Choose the  	Facebook tab, <strong>paste</strong> the App ID and App Secret and then <strong>Save</strong>. </p>
-	</li>
+		Choose the  	Facebook tab, <strong>paste</strong> the App ID and App Secret and then <strong>Save</strong>. </li>
 	<li>
-		<p>Now press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. </p>
-	</li>
+		Now press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. </li>
 	<li>
-		<p>It should  	display,  &quot;URL Generating...DONE!&quot; if yes, press  	&quot;<strong>Authorize the Facebook  	App&quot;. If not </strong>an error will  	explain the problem, resolve it and repeat the Access Token  	Generation process. </p>
-	</li>
+		It should  	display,  &quot;URL Generating...DONE!&quot; if yes, press  	&quot;<strong>Authorize the Facebook  	App&quot;. If not </strong>an error will  	explain the problem, resolve it and repeat the Access Token  	Generation process. </li>
 	<li>
-		<p>Login in to  	Facebook and confirm. </p>
-	</li>
+		Login in to  	Facebook and confirm. </li>
 	<li>
-		<p>You are now  	ready to <strong>import</strong> your <strong>Facebook timeline</strong>.  	If you want to import a stream from a <strong>Facebook  	Page</strong>, then follow the next  	step. </p>
-	</li>
+		You are now  	ready to <strong>import</strong> your <strong>Facebook timeline</strong>.  	If you want to import a stream from a <strong>Facebook  	Page</strong>, then follow the next  	step. </li>
 	<li>
-		<p>To import  	the posts from a <strong>Facebook Page</strong> instead of from a <strong>user's  	timeline</strong>, go to the <strong>ActivateGrid's</strong> settings, then Facebook tab, and insert the <strong>Page  	name</strong>, then <strong>Save</strong>. </p>
-	</li>
+		To import  	the posts from a <strong>Facebook Page</strong> instead of from a <strong>user's  	timeline</strong>, go to the <strong>ActivateGrid's</strong> settings, then Facebook tab, and insert the <strong>Page  	name</strong>, then <strong>Save</strong>. </li>
 </ol>
 <h4>Twitter</h4>
 <ol>
+	<li>		Go to <span lang="zxx" xml:lang="zxx"><U><a href="https://dev.twitter.com/">dev.twitter.com</a></U></span>,  	login or sign up. </li>
+	<li>		Click &quot;<strong>My  	applications</strong>&quot; You will see  	this as you hover over your avatar at the top-right of the page. </li>
+	<li>		Click &quot;<strong>Create  	a new application</strong>&quot;. </li>
 	<li>
-		<p>Go to <span lang="zxx" xml:lang="zxx"><U><a href="https://dev.twitter.com/">dev.twitter.com</a></U></span>,  	login or sign up. </p>
-	</li>
-	<li>
-		<p>Click &quot;<strong>My  	applications</strong>&quot; You will see  	this as you hover over your avatar at the top-right of the page. </p>
-	</li>
-	<li>
-		<p>Click &quot;<strong>Create  	a new application</strong>&quot;. </p>
-	</li>
-	<li>
-		<p>Insert the  	following data: </p>
-		<ul>
-			<li>
-				<p><strong>Name</strong>: <strong>ActivateGrid </strong> </p>
-			</li>
-			<li>
-				<p><strong>Description</strong>:  		&quot;Twitter app for the Joomla! component ActivateGrid&quot; </p>
-			</li>
-			<li>
-				<p><strong>Website</strong>:  		Your Joomla! site URL. </p>
-			</li>
-			<li>
-				<p><strong>Callback  		URL</strong> - leave empty </p>
-			</li>
-			<li>
-				<p>Agree Terms  		and Conditions and complete and type in the <strong>captcha</strong> security code. </p>
-			</li>
+		Insert the  	following data: <ul>
+			<li>				<strong>Name</strong>: <strong>ActivateGrid </strong> </li>
+			<li>				<strong>Description</strong>:  		&quot;Twitter app for the Joomla! component ActivateGrid&quot; </li>
+			<li>				<strong>Website</strong>:  		Your Joomla! site URL. </li>
+			<li>				<strong>Callback  		URL</strong> - leave empty </li>
+			<li>				Agree Terms  		and Conditions and complete and type in the <strong>captcha</strong> security code. </li>
 		</ul>
 	</li>
-	<li>
-		<p>Click  	&quot;<strong>Generate my access token</strong>&quot;  	at the bottom of the page. </p>
-	</li>
-	<li>
-		<p>Copy and  	paste the following to the ActivateGrid settings &gt; <strong>Twitter</strong>: </p>
-		<ul>
-			<li>
-				<p><strong>Consumer  		key </strong> </p>
-			</li>
-			<li>
-				<p><strong>Consumer  		secret </strong> </p>
-			</li>
-			<li>
-				<p><strong>Access  		token </strong> </p>
-			</li>
-			<li>
-				<p><strong>Access  		token secret </strong> </p>
-			</li>
+	<li>		Click  	&quot;<strong>Generate my access token</strong>&quot;  	at the bottom of the page. </li>
+	<li>		Copy and  	paste the following to the ActivateGrid settings &gt; <strong>Twitter</strong>: <ul>
+			<li>				<strong>Consumer  		key </strong> </li>
+			<li>				<strong>Consumer  		secret </strong> </li>
+			<li>				<strong>Access  		token </strong> </li>
+			<li>				<strong>Access  		token secret </strong> </li>
 		</ul>
 	</li>
-	<li>
-		<p><strong>Insert</strong> the <strong>username</strong> from which you want to import the tweets and <strong>Save</strong> </p>
-	</li>
-	<li>
-		<p>You are now  	ready to import your Twitter activities to your Joomla! website. </p>
-	</li>
+	<li>		<strong>Insert</strong> the <strong>username</strong> from which you want to import the tweets and <strong>Save</strong> </li>
+	<li>		You are now  	ready to import your Twitter activities to your Joomla! website. </li>
 </ol>
 <h4>&nbsp;</h4>
 <h4>Instagram </h4>
 <h4>Go to <span lang="zxx" xml:lang="zxx"><U><a href="http://instagram.com/developer/">instagram.com/developer</a></U></span>,  login or sign up. </h4>
 <ol>
+	<li>		Click <strong>Manage  	Clients</strong> then <strong>Register  	a New Client</strong> </li>
 	<li>
-		<p>Click <strong>Manage  	Clients</strong> then <strong>Register  	a New Client</strong> </p>
-	</li>
-	<li>
-		<p>Insert the  	following data: </p>
-		<ul>
-			<li>
-				<p><strong>Name</strong>:  		ActivateGrid </p>
-			</li>
-			<li>
-				<p><strong>Description</strong>:  		&quot;Instagram app for the Joomla! component ActivateGrid&quot; </p>
-			</li>
-			<li>
-				<p><strong>Website</strong>:  		Your Joomla! site URL. </p>
-			</li>
-			<li>
-				<p><strong>OAuth  		redirect_uri</strong>: http://<strong>{YOUR  		DOMAIN HERE}</strong>/administrator/index.php?option=com_activategrid </p>
-			</li>
+		Insert the  	following data: <ul>
+			<li>				<strong>Name</strong>:  		ActivateGrid </li>
+			<li>				<strong>Description</strong>:  		&quot;Instagram app for the Joomla! component ActivateGrid&quot; </li>
+			<li>				<strong>Website</strong>:  		Your Joomla! site URL. </li>
+			<li>				<strong>OAuth  		redirect_uri</strong>: http://<strong>{YOUR  		DOMAIN HERE}</strong>/administrator/index.php?option=com_activategrid </li>
 		</ul>
 	</li>
-	<li>
-		<p>Copy and  	paste the following codes in the ActivateGrid settings &gt; <strong>Instagram</strong>: </p>
-		<ul>
-			<li>
-				<p><strong>Client ID </strong> </p>
-			</li>
-			<li>
-				<p><strong>Client  		secret </strong> </p>
-			</li>
-			<li>
-				<p><strong>Redirect  		URI </strong> </p>
-			</li>
+	<li>		Copy and  	paste the following codes in the ActivateGrid settings &gt; <strong>Instagram</strong>: <ul>
+			<li>				<strong>Client ID </strong> </li>
+			<li>				<strong>Client  		secret </strong> </li>
+			<li>				<strong>Redirect  		URI </strong> </li>
 		</ul>
 	</li>
-	<li>
-		<p>Once you have  	pasted the information above, press <strong>Save</strong>. </p>
-	</li>
-	<li>
-		<p>Now, press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. This process will  	auto-fill the Access token and the username, you do not need to  	insert them. </p>
-	</li>
-	<li>
-		<p>You should  	read &quot;URL Generating...DONE!&quot; if yes press &quot;<strong>Authorize  	the Instagram App&quot;. If not </strong>an  	error will explain the problem, solve it and repeat the process. </p>
-	</li>
-	<li>
-		<p>You are now  	ready to <strong>import</strong> your <strong>Instagram photos </strong>in  	Joomla!</p>
-	</li>
+	<li>		Once you have  	pasted the information above, press <strong>Save</strong>. </li>
+	<li>		Now, press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. This process will  	auto-fill the Access token and the username, you do not need to  	insert them. </li>
+	<li>		You should  	read &quot;URL Generating...DONE!&quot; if yes press &quot;<strong>Authorize  	the Instagram App&quot;. If not </strong>an  	error will explain the problem, solve it and repeat the process. </li>
+	<li>		You are now  	ready to <strong>import</strong> your <strong>Instagram photos </strong>in  	Joomla!</li>
 </ol>
 <h4>&nbsp;</h4>
 <h4>Storify </h4>
 <ol>
-	<li>
-		<p>Go to <span lang="zxx" xml:lang="zxx"><U><a href="http://dev.storify.com/request">dev.storify.com</a></U></span> </p>
-	</li>
-	<li>
-		<p>Complete the  	required information on the form and press &quot;<strong>Request  	API key</strong>&quot;, you will then  	receive an email with your personal <strong>Storify  	API key</strong>. </p>
-	</li>
-	<li>
-		<p><strong>Attention</strong> - In order to setup properly the extension, following the <span lang="zxx" xml:lang="zxx"><U><a href="#auth">Storify  	instructions</a></U></span> your  	Storify username and password are requested to proceed. </p>
-	</li>
-	<li>
-		<p>In the  	ActivateGrid settings &gt; <strong>Storify</strong> insert your Storify username and password, then <strong>Save  	*</strong>. </p>
-	</li>
-	<li>
-		<p>Now, press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. This process will  	auto-fill the Access Token and the Storify Website URL, you do not  	need to insert them. </p>
-	</li>
-	<li>
-		<p>You are now  	ready to <strong>import</strong> your <strong>Storify stories </strong>into  	Joomla!</p>
-	</li>
+	<li>		Go to <span lang="zxx" xml:lang="zxx"><U><a href="http://dev.storify.com/request">dev.storify.com</a></U></span> </li>
+	<li>		Complete the  	required information on the form and press &quot;<strong>Request  	API key</strong>&quot;, you will then  	receive an email with your personal <strong>Storify  	API key</strong>. </li>
+	<li>		<strong>Attention</strong> - In order to setup properly the extension, following the <span lang="zxx" xml:lang="zxx"><U><a href="#auth">Storify  	instructions</a></U></span> your  	Storify username and password are requested to proceed. </li>
+	<li>		In the  	ActivateGrid settings &gt; <strong>Storify</strong> insert your Storify username and password, then <strong>Save  	*</strong>. </li>
+	<li>		Now, press  	&quot;<strong>Generate your Access  	Token</strong>&quot;. This process will  	auto-fill the Access Token and the Storify Website URL, you do not  	need to insert them. </li>
+	<li>		You are now  	ready to <strong>import</strong> your <strong>Storify stories </strong>into  	Joomla!</li>
 </ol>
 <p><strong>* Your  Storify account details will be removed from your Joomla! Database  once you generate your access token, pressing the green button.</strong></p>
 <p><br />
@@ -315,7 +207,19 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <p>Option 1: Create a <strong>cron job</strong> on your web server (<strong>scheduled  task </strong>for Windows Server). </p>
 <p>Option 2:  Install the Joomla! <span lang="zxx" xml:lang="zxx"><U><a href="file:///h">JPrc  Cronjobs</a></U></span> extension  to emulate the cron job * </p>
 <p>* We strongly  recommend utilizing the <strong>1st </strong>option. We have extensively  tested this extension with great success but as in all software  configurations, we can not guarantee results and, can not be held  responsible for any problems caused by this extension.</p>
-<p>&nbsp;</p>
+<p>The URL to set in to a cron job script has now to being created. If you have installed the ActivateGrid installation package, you probably have ActivateGridPI component too. This component hasn't a back end interface, it will be required in this phase for creating a new hidden menu item. Follow the steps below:</p>
+<ol>
+	<li>If you already have an hidden menu jump to step 3, if not, create an hidden menu (<strong>Menus</strong> -&gt; <strong>Menu Manager</strong> -&gt; <strong>Add a new menu</strong>).</li>
+	<li>Enter <strong>Title</strong> -&gt; &quot;Hidden Menu&quot;, <strong>Menu Type</strong> -&gt; &quot;hidden-menu&quot;, <strong>Save &amp; Close</strong>.</li>
+	<li>Go inside your hidden menu  (<strong>Menus</strong> -&gt; <em>Hidden Menu</em> -&gt; <strong>Add a New Menu Item</strong>).</li>
+	<li>Enter the <strong>Menu Title</strong> -&gt; &quot;<em><strong>activategrid-import</strong></em>&quot; (You can choose your own)</li>
+	<li>Select <strong>Menu Item Type</strong>, choose <strong>ActivateGridPI -&gt; URL for cronjob script</strong>.</li>
+	<li><strong>Save &amp; Close</strong></li>
+</ol>
+<p>A new URL is now available on your website and it's like http://yourdomain.com/<strong>activategrid-import</strong> (Or different if you chose a different <strong>Menu Title</strong> or <strong>Alias</strong> in the step 2). In case of your Joomla! is not configured for using URL rewrite, the new URL it's like: http://yourdomain.com/<strong>index.php?option=com_activategrid_pi&amp;view=public_import&amp;Itemid=<em>MENU_ITEM_ID</em></strong></p>
+<p>To complete the  setup for importing automatically the feed items, the last step is create a cron job.</p>
+<p>We suggest to follow <a href="http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/" target="_blank">this tutorial</a> that explains the commands to execute on a linux server or <a href="http://windows.microsoft.com/en-gb/windows/schedule-task#1TC=windows-7" target="_blank">this</a> one for Windows Server</p>
+<p>If you can't create a cron job, you can install <a href="http://extensions.joomla.org/extensions/administration/admin-desk/19490" target="_blank">this</a> Joomla! extension that will emulate the cron jobs using http requests generated from the front-end, during the navigation of the website's users.</p>
 <h2>3. Front end configuration</h2>
 <h3>3.1 How to show the grid</h3>
 <p>If you want a  grid that <strong>fills </strong>the <strong>page</strong> (or most  of the display area), you have to create a <strong>menu item </strong>and  connect it to the <strong>component</strong>. This process is  necessary because the <strong>extension</strong> is a Joomla!  component. Each component needs to be &quot;connected&quot; to a menu  item in order for it to work. </p>
@@ -323,43 +227,21 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <p>Please, follow  the following instructions on how to create a <strong>Full Page Grid  View</strong>:</p>
 <ol>
 	<li>
-		<p>Create a menu  	item </p>
-		<ul>
-			<li>
-				<p><strong>Menus</strong> -&gt; <em>Main Menu (or any)</em>-&gt; <strong>New</strong> </p>
-			</li>
-			<li>
-				<p>Name the  		page </p>
-			</li>
-			<li>
-				<p>Press the  		blue button<strong> Menu Item Type</strong> -&gt; <strong>Select</strong> and choose <strong>Activate Grid</strong> -&gt; <strong>Responsive Grid View</strong> </p>
-			</li>
+		Create a menu  	item <ul>
+			<li>				<strong>Menus</strong> -&gt; <em>Main Menu (or any)</em>-&gt; <strong>New</strong> </li>
+			<li>				Name the  		page </li>
+			<li>				Press the  		blue button<strong> Menu Item Type</strong> -&gt; <strong>Select</strong> and choose <strong>Activate Grid</strong> -&gt; <strong>Responsive Grid View</strong> </li>
 		</ul>
 	</li>
 	<li>
-		<p>Choose your  	settings </p>
-		<ul>
-			<li>
-				<p>Select the  		tab &quot;<strong>Activate Grid  		options</strong>&quot; to customize the  		page. </p>
-			</li>
-			<li>
-				<p>Here you can  		select which feeds to include in this grid instance. Choose the  		categories you want, (Facebook, Instagram, your own categories,  		etc.) to show in the page using the field &quot;<strong>Select  		source categories</strong>&quot;.  		Remember that you can also display standard Joomla! articles in the  		grid, just select the categories that you want to show. The feed  		items are imported in Joomla! as articles so they are organized in  		categories as well. These categories are created automatically. </p>
-			</li>
-			<li>
-				<p>If you want  		to change the grid's element size, set &quot;<strong>Grid  		item width</strong>&quot; and &quot;<strong>Grid  		item height</strong>&quot;. </p>
-			</li>
-			<li>
-				<p>Select the  		order in which to display your elements (by date, alphabetically,  		random) </p>
-			</li>
-			<li>
-				<p>Select the  		animation effect you wish to apply to the elements </p>
-			</li>
-			<li>
-				<p>If you want  		to show a title or introductory text above the grid, use the Yes/No  		switches to choose what to display. Select a category in &quot;<strong>Select  		category intro&quot;</strong> and then  		put your text in <strong>Content</strong> -&gt; <strong>Category Manager</strong> -&gt; [Click the category you chose] -&gt; [Write the text in the  		description field]. </p>
-			</li>
-			<li>
-				<p><strong>Save</strong> </p>
-			</li>
+		Choose your  	settings <ul>
+			<li>				Select the  		tab &quot;<strong>Activate Grid  		options</strong>&quot; to customize the  		page. </li>
+			<li>				Here you can  		select which feeds to include in this grid instance. Choose the  		categories you want, (Facebook, Instagram, your own categories,  		etc.) to show in the page using the field &quot;<strong>Select  		source categories</strong>&quot;.  		Remember that you can also display standard Joomla! articles in the  		grid, just select the categories that you want to show. The feed  		items are imported in Joomla! as articles so they are organized in  		categories as well. These categories are created automatically. </li>
+			<li>				If you want  		to change the grid's element size, set &quot;<strong>Grid  		item width</strong>&quot; and &quot;<strong>Grid  		item height</strong>&quot;. </li>
+			<li>				Select the  		order in which to display your elements (by date, alphabetically,  		random) </li>
+			<li>				Select the  		animation effect you wish to apply to the elements </li>
+			<li>				If you want  		to show a title or introductory text above the grid, use the Yes/No  		switches to choose what to display. Select a category in &quot;<strong>Select  		category intro&quot;</strong> and then  		put your text in <strong>Content</strong> -&gt; <strong>Category Manager</strong> -&gt; [Click the category you chose] -&gt; [Write the text in the  		description field]. </li>
+			<li>				<strong>Save</strong> </li>
 		</ul>
 	</li>
 </ol>
@@ -372,36 +254,20 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <p>Follow the same  instructions of <strong>3.1 How to show the grid</strong>, shown  above. Then, setup an <strong>instance</strong> of the Grid component and link the module to the instance that you  just created.</p>
 <p><strong>Once  the menu item</strong> has been created </p>
 <ol>
-	<li>
-		<p><strong>Go  	into Extensions</strong> -&gt; <strong>Module  	Manager</strong> -&gt; <strong>New</strong> -&gt; <strong>ActivateGrid</strong> </p>
-	</li>
-	<li>
-		<p>Set a <strong>name</strong> and a <strong>position</strong> (search in your template guide if you do not know the positions). </p>
-	</li>
-	<li>
-		<p>Select the  	menu item that you just created (in <strong>3.1  	How to show the grid</strong>, above).  	The menu item represents an instance of the Activate Grid component. </p>
-	</li>
-	<li>
-		<p>Choose the <strong>Menu Assignment</strong>. </p>
-	</li>
-	<li>
-		<p><strong>Enable</strong> the module and Save. </p>
-	</li>
+	<li>		<strong>Go  	into Extensions</strong> -&gt; <strong>Module  	Manager</strong> -&gt; <strong>New</strong> -&gt; <strong>ActivateGrid</strong> </li>
+	<li>		Set a <strong>name</strong> and a <strong>position</strong> (search in your template guide if you do not know the positions). </li>
+	<li>		Select the  	menu item that you just created (in <strong>3.1  	How to show the grid</strong>, above).  	The menu item represents an instance of the Activate Grid component. </li>
+	<li>		Choose the <strong>Menu Assignment</strong>. </li>
+	<li>		<strong>Enable</strong> the module and Save. </li>
 </ol>
 <p>The module is  now visible in the pages and position that you chose.</p>
 <p>&nbsp;&nbsp;</p>
 <p><strong>3.2.2 Grid  inside an article</strong></p>
 <p>To display the <strong>grid within an article</strong>, you need to:</p>
 <ol>
-	<li>
-		<p>Create an  	instance of the core (follow <strong>3.1 How to show the grid</strong>).</p>
-	</li>
-	<li>
-		<p>Create the  	module, following<strong> 3.2.1 Grid in a module position</strong>.</p>
-	</li>
-	<li>
-		<p>Create an  	article and use the Joomla! feature &quot;<strong>loadposition</strong>&quot;  	or &quot;<strong>loadmodule</strong>&quot;.  	Activate Grid supports both these features. For example, if you put  	the Grid module into a <strong>custom  	position</strong> named  	&quot;<em>grid_module_position&quot;</em>,  	you can put &quot;{loadposition grid_module_position} in the  	article's code. This trick will load the grid inside the article.  	You can also use loadmodule, using the name of the created module,  	in the same way of before. </p>
-	</li>
+	<li>		Create an  	instance of the core (follow <strong>3.1 How to show the grid</strong>).</li>
+	<li>		Create the  	module, following<strong> 3.2.1 Grid in a module position</strong>.</li>
+	<li>		Create an  	article and use the Joomla! feature &quot;<strong>loadposition</strong>&quot;  	or &quot;<strong>loadmodule</strong>&quot;.  	Activate Grid supports both these features. For example, if you put  	the Grid module into a <strong>custom  	position</strong> named  	&quot;<em>grid_module_position&quot;</em>,  	you can put &quot;{loadposition grid_module_position} in the  	article's code. This trick will load the grid inside the article.  	You can also use loadmodule, using the name of the created module,  	in the same way of before. </li>
 </ol>
 <p>&nbsp;</p>
 <p><strong>3.2.3 Display  Joomla! articles in the grid</strong></p>
@@ -420,8 +286,10 @@ A Joomla! plugin that utilises jquery masonry to create a responsive grid layout
 <p>&nbsp;</p>
 <h3>4.4 Disable animations</h3>
 <p>To <strong>disable  the grid animation,</strong> go into the component settings  (<strong>Components</strong> -&gt; <strong>Activate Grid</strong> -&gt; <strong>Setup</strong>) and turn-off  &quot;<strong>Enable animations</strong><strong>&quot;</strong>.  By disabling this feature your website will run <strong>faster</strong><strong> </strong>and<strong> </strong><strong>more  efficiently.</strong></p>
+<h3>&nbsp;</h3>
 <h3>4.5 Manage grid elements content</h3>
 <p>You can choose  to enable or disable some of content inside a grid element. In <strong>Components</strong> -&gt; <strong>Activate Grid</strong> -&gt; <strong>Setup</strong> in each <strong>social network</strong>'s tab  you can for example remove the social network's icon, or display the  tweet date etc. </p>
+<h3>&nbsp;</h3>
 <h3>4.6 Extras</h3>
 <p><strong>Name of the  category in the grid's element</strong></p>
 <p>If you are  interested in displaying the social network’s name in the box, or  in the scenario you are using your own articles' categories, you can  display the category name in the box, by going to  the menu item  settings, in the tab &quot;<strong>Activate Grid options</strong>&quot;  and enabling &quot;<strong>Display category name&quot;</strong>. </p>
