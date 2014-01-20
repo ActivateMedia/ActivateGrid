@@ -2,6 +2,16 @@
     margin-left: 5px;
 }
 
+.accordion-inner .row-fluid:nth-child(odd)
+{
+background:#f9f9f9;
+}
+
+.accordion-inner  .row-fluid:nth-child(even)
+{
+background:#ffffff;
+}
+
 .badge .icon-ok:before {
     color: #fff !important;    
 } 

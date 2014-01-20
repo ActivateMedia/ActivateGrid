@@ -2,7 +2,7 @@
 /**
  * @version     1.0.0
  * @package     com_activategrid
- * @copyright   Copyright (C) 2013. All rights reserved.
+ * @copyright   Copyright (C) 2014. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  * @author      Andrea Falzetti <info@activatemedia.co.uk> - http://activatemedia.co.uk
  */

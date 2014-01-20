@@ -9,17 +9,10 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-?>
 
-<?php            
-    echo $this->html;
+echo $this->html;
 
-    
-    /*
-     * <script src="<?=JURI::base();?>components/com_activategrid/views/advancedsettings/tmpl/assets/js/bootstrap-colorpicker.js"></script>
-<script src="http://www.eyecon.ro/bootstrap-colorpicker/js/google-code-prettify/prettify.js"></script>
 
-     */
 ?>
 
 

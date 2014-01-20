@@ -2,7 +2,7 @@
 /**
  * @version     1.0.0
  * @package     com_activategrid
- * @copyright   Copyright (C) 2013. All rights reserved.
+ * @copyright   Copyright (C) 2014. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  * @author      Andrea Falzetti <info@activatemedia.co.uk> - http://activatemedia.co.uk
  */
@@ -844,7 +844,9 @@ class ActivategridHelper
                                     "maximum"          => $componentParams->get('twitter_maximum', 10),
                                     "caching"          => $componentParams->get('twitter_caching', 60),
                                     "url_replace"      => $componentParams->get('twitter_url_replace', 1),
-                                    "autopublish_feed" => $componentParams->get('autopublish_feed', 1));
+                                    "autopublish_feed" => $componentParams->get('autopublish_feed', 1),
+                                    "import_replies"   => $componentParams->get('twitter_import_replies', 1),
+                                    "import_retweets"   => $componentParams->get('twitter_import_retweets', 1));
             
             // I check if the category exists
             $category_id = self::checkCategoryExists("twitter");
@@ -903,9 +905,7 @@ class ActivategridHelper
                 $hashtags_querystring = rawurlencode($hashtags_querystring);
                 $twitter_mode = "HASHTAG";
             }
-            
-            //$filename = basename(__FILE__, '.php').'.json';
-            //$filetime = file_exists($filename) ? filemtime($filename) : time() - $caching - 1;
+
             $filetime = time() - $caching - 1;
                         
             $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';            
@@ -922,10 +922,7 @@ class ActivategridHelper
             curl_setopt($curl_request, CURLOPT_SSL_VERIFYPEER, false);
             $response = curl_exec($curl_request);
 
-            // Hashtags
-            //$username = rawurlencode($username);
-            //die($username);
-            
+            // Hashtags            
             if($twitter_mode == "USER")
             {
                 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -979,20 +976,32 @@ class ActivategridHelper
             $reportCounter["warning"]=2;
             foreach($jTfeeds as $tweet)
             {            
-                $thisTweetIsReply = false;
-                if($componentParams->get('twitter_import_replies', "0") == 0)
+                $stop_import = false;
+                
+                // @ - @usernameToReply
+                if($twitter_config["import_replies"] == 0)
                 {
                     // No tweets as replies!
                     if(substr($tweet->text,0,1)=="@")
                     {
-                        $thisTweetIsReply = true;                                                                             
+                        $stop_import = true;                                                                             
+                    }
+                }
+                
+                // RT - ReTweet Import
+                if($twitter_config["import_retweets"] == 0)
+                {
+                    // No tweets as replies!
+                    if(substr($tweet->text,0,2)=="RT")
+                    {
+                        $stop_import = true;                                                                             
                     }
                 }
                 
                 if(isset($tweet->id_str))
                 {
-                    // If the item has not been imported yet
-                    if($thisTweetIsReply)
+                    // stop the import of this tweet. It's probably a RT or @ (see settings)                      
+                    if($stop_import)
                     {
                         // No import!
                         $output_html .= "<div class='row-fluid'>\n
@@ -1001,7 +1010,7 @@ class ActivategridHelper
                                                             <span class='badge badge-warning'><span class='icon-remove report-icon'></span></span>\n
                                                         </div>\n
                                                         <div class='span10'><small>".self::cutFeedTitle($tweet->text, 100)."</small></div>\n
-                                                        <div class='span1'>@ No imported.</div>\n
+                                                        <div class='span1'>-</div>\n
                                                     </div>\n
                                                  </div>\n";
                          $reportCounter["warning"]++;   
@@ -1269,6 +1278,9 @@ class ActivategridHelper
                             
                             // Media
                             $picURL = "";
+                            $mediaType = "";
+                            $mediaAlt = "";
+                            $image_intro_caption = "";
                             if(isset($feed["attachment"]["media"]))
                             {
                                 /* If the user upload pictures, media type doesn't exists, so I check by a different way */
@@ -1280,7 +1292,6 @@ class ActivategridHelper
                                 $mediaAlt = $feed["attachment"]["media"][0]["alt"];
                                 $mediaHREF = $feed["attachment"]["media"][0]["href"];
                                 $image_intro_caption = $mediaType;
-                                //self::DLog("type=".$mediaType);
                                 
                                 if($mediaType == "video" || $mediaType == "photo" || $photoStream == true)
                                 {

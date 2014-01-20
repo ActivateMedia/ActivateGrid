@@ -196,16 +196,6 @@
                 required="false"
                 size="2" />
                 
-               <!-- <field
-                name="twitter_caching"
-                type="text"
-                class="inputbox"
-                default="60"
-                size="2"
-                label="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING"
-                description="COM_ACTIVATEGRID_CONFIG_SCRAPER_CACHING_DESC"
-                required="false" /> -->
-                
                 <field type="spacer" name="twitter_spacer3" label="COM_ACTIVATEGRID_ADVANCED_SETTINGS" />
             
                 <field
@@ -249,6 +239,20 @@
                         <option
                                 value="0">JNO</option>
                 </field>
+                
+                <field
+                        name="twitter_import_retweets"
+                        type="radio"
+                        class="radio btn-group"
+                        default="1"
+                        label="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_12"
+                        description="COM_ACTIVATEGRID_CONFIG_TWITTER_LBL_12_DESC"
+                        required="false">
+                    <option
+                                value="1">JYES</option>
+                        <option
+                                value="0">JNO</option>
+                </field>                
                 
                 <field
                         name="twitter_show_icon"

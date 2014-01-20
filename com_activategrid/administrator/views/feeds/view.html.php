@@ -26,34 +26,29 @@ class ActivategridViewFeeds extends JViewLegacy
 	 * Display the view
 	 */
 	public function display($tpl = null)
-	{
-		$this->state	= $this->get('State');
-		$this->item	= $this->get('Item');
-		$this->form	= $this->get('Form');
-                
-                $jinput = JFactory::getApplication()->input;
-                $task = $jinput->get('task', "", '');
-                
-                $app = JFactory::getApplication();   
-                $document = JFactory::getDocument();
-                $document->addStyleSheet(JURI::base()."components/com_activategrid/views/feeds/tmpl/assets/css/layout.css");
-                
-                JHtml::_('jquery.framework'); // load jquery
-                $document->addScript(JURI::base()."components/com_activategrid/views/feeds/tmpl/assets/js/report.js");
-                if($task == "back")
-                {
-                    header("location: ".JURI::base()."index.php?option=com_activategrid");
-                }
-                
-                ActivategridHelper::generateReportPageHTML();
-		
-                // Check for errors.
-		if (count($errors = $this->get('Errors'))) {
-                    throw new Exception(implode("\n", $errors));
-		}
+	{               
+            $jinput = JFactory::getApplication()->input;
+            $task = $jinput->get('task', "", '');
 
-		$this->addToolbar();
-		parent::display($tpl);
+            $document = JFactory::getDocument();
+            $document->addStyleSheet(JURI::base()."components/com_activategrid/views/feeds/tmpl/assets/css/layout.css");
+
+            JHtml::_('jquery.framework'); // load jquery
+            $document->addScript(JURI::base()."components/com_activategrid/views/feeds/tmpl/assets/js/report.js");
+            if($task == "back")
+            {
+                header("location: ".JURI::base()."index.php?option=com_activategrid");
+            }
+
+            ActivategridHelper::generateReportPageHTML();
+
+            // Check for errors.
+            if (count($errors = $this->get('Errors'))) {
+                throw new Exception(implode("\n", $errors));
+            }
+
+            $this->addToolbar();
+            parent::display($tpl);
 	}
 
 
@@ -64,33 +59,9 @@ class ActivategridViewFeeds extends JViewLegacy
 	 */
 	protected function addToolbar()
 	{
-		//require_once JPATH_COMPONENT.'/helpers/activategrid.php';
-                
-                JToolBarHelper::title(JText::_('COM_ACTIVATEGRID')." / ".JText::_('COM_ACTIVATEGRID_GET_FEEDS'), '');
-                //JToolBarHelper::save('activategrid.save');
-                JToolBarHelper::preferences('com_activategrid','','','Basic Options');
-//                JToolBarHelper::back("Back", "javascript:history.back();" , "btn-back");
-JToolBarHelper::back();                
-//JToolBarHelper::custom("back", 'cancel', '' ,'Back', false);
-                
-                JToolBarHelper::help('activategrid', 'com_activategrid');
+            JToolBarHelper::title(JText::_('COM_ACTIVATEGRID')." / ".JText::_('COM_ACTIVATEGRID_GET_FEEDS'), '');
+            JToolBarHelper::preferences('com_activategrid','','','Basic Options');
+            JToolBarHelper::back();
+            JToolBarHelper::help('activategrid', 'com_activategrid');
 	}
-        
-        private static function printButtons()
-        {
-            echo '<div class="row-fluid">';
-            echo '   <div class="span12">';
-            echo         '<div class="span6">';
-            echo             '<a href="?option=com_config&amp;view=component&amp;component=com_activategrid">';
-            echo                 '<button type="button" class="btn btn-large btn-block btn-info">'.@JText::_(COM_ACTIVATEGRID_CONFIGURATION).'</button>';
-            echo             '</a>';
-            echo         '</div>';
-            echo         '<div class="span6">';
-            echo             '<a href="index.php?option=com_activategrid&view=feeds">';
-            echo                 '<button type="button" class="btn btn-large btn-block btn-success">'.@JText::_(COM_ACTIVATEGRID_GET_FEEDS).'</button>';
-            echo             '</a>';
-            echo         '</div>';            
-            echo '   </div>';
-            echo '</div><br/>';
-        }
 }
