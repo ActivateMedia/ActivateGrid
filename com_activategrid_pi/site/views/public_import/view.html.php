@@ -39,8 +39,8 @@ class activategridpiViewpublic_import extends JViewLegacy {
                 JHtml::_('jquery.framework'); // load jquery
                 $document->addScript(JURI::base()."components/com_activategrid_pi/views/public_import/tmpl/assets/js/report.js");
                                 
-                ActivategridHelper::generateReportPageHTML();
-		
+                //ActivategridHelper::generateReportPageHTML();
+				ActivategridHelper::get_all_social_networks_feeds();
                 // Check for errors.
 		if (count($errors = $this->get('Errors'))) {
                     throw new Exception(implode("\n", $errors));
