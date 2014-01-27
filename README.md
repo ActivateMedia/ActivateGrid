@@ -1,7 +1,12 @@
 activate-grid
 =============
 
-A Joomla! extension that utilises jquery masonry to create a responsive grid layout for articles and selected social media
+<p>The ActivateGrid component for Joomla! allows you to build highly dynamic pages utilising content directly from your social media accounts. This plugin component aggregates posts from your Facebook, Instagram, Twitter or Storify accounts and displays them in an animated and dynamic grid. It also allows you to integrate Joomla! content articles into the grid using the title and image of each article.</p>
+
+<p>ActivateGrid can be set to automatically update grid spaces when new content goes up on one of your social networks, or it can be set to curation mode; giving you complete control what is displayed.</p>
+
+<p>Thanks to the responsive design the grid can be used on all desktop and mobile devices. </p>
+
 
 <h1>ActivateGrid - Joomla! Component</h1>
 <h2>Guide</h2>
