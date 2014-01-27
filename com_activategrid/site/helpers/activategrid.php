@@ -31,7 +31,7 @@ class ActivategridHelper
                 {
                     $gridSelectors .= " ".$grid->gridItemSelector;
                 }
-                         
+
                 $loadMasonryAtEnd = false;
                 //ActivategridHelper::DLog($componentParams);
                 $grid->load_content_dinamically = $load_content_dinamically;
@@ -336,8 +336,8 @@ class ActivategridHelper
                             
                             if(!empty($content->fulltext))
                             {
-                                $htmlrow .= ActivategridHelper::truncateHTML(stripcslashes($content->fulltext), $textLimit);
-                            }
+                                $htmlrow .= "<p class='text'>".ActivategridHelper::truncateHTML(stripcslashes($content->fulltext), $textLimit)."</p>";
+                            }                            
                                                                          
 
                             $htmlrow .= "</div>\n";
@@ -387,16 +387,17 @@ class ActivategridHelper
                             $grid->feedsRow[] = $htmlrow;
                         }
                         else
-                        {                        
-                            
+                        {
                             $images = json_decode($content->images);
                             //$routable_url = "index.php?option=com_activategrid&view=pageslide&catid=".$content->catid."&artid=".$content->id."&Itemid=".$itemid;
                             $routable_url = "index.php?option=com_content&view=article&id=".$content->id;
                             $article_url = JRoute::_($routable_url);
 
-                            $htmlrow = '<div onclick="Open(\''.$article_url.'\')" '.$cat_bg_color.' class="'.$gridSelectors.' '.$category_name_safe.'">';
+                            //die("Selectors => ".$gridSelectors);
+                            $htmlrow  = '<div onclick="Open(\''.$article_url.'\')" '.$cat_bg_color.' class="'.$gridSelectors.'  '.$category_name_safe.'">'."\n";
+                            //$htmlrow = '<div onclick="Open(\''.$article_url.'\')" '.$cat_bg_color.' aclass="'.$gridSelectors.' '.$category_name_safe.'">';
                             if(!empty($images->image_intro))
-                            {
+                            {                                
                                 $htmlrow .= '<span style="background: '.$cat_bg_color->value.' url('.$images->image_intro.') center center no-repeat;" class="thumb">&nbsp;</span>';
                             }
                             
