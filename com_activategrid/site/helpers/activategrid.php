@@ -393,17 +393,27 @@ class ActivategridHelper
                             //$routable_url = "index.php?option=com_activategrid&view=pageslide&catid=".$content->catid."&artid=".$content->id."&Itemid=".$itemid;
                             $routable_url = "index.php?option=com_content&view=article&id=".$content->id;
                             $article_url = JRoute::_($routable_url);
-echo "Grid Selectors -> ".$gridSelectors;
-                            $htmlrow = '<div onclick="Open(\''.$article_url.'\')" class="'.$gridSelectors.' '.$category_name_safe.'">';
+
+                            $htmlrow = '<div onclick="Open(\''.$article_url.'\')" '.$cat_bg_color.' class="'.$gridSelectors.' '.$category_name_safe.'">';
                             if(!empty($images->image_intro))
                             {
                                 $htmlrow .= '<span style="background: '.$cat_bg_color->value.' url('.$images->image_intro.') center center no-repeat;" class="thumb">&nbsp;</span>';
                             }
                             
+                            
                             if($grid->show_category_title)
                                     $htmlrow .= '<p class="category">'.  strtoupper($category_name).'</p>';
+                               
                             
                             $htmlrow .= '<p class="category">'.$content->title.'</p>';
+                            
+                            //die(htmlspecialchars($content->introtext));
+                            if(empty($images->image_intro))
+                            {
+                                $htmlrow .= '<span class="text">'.  strip_tags($content->introtext).'</span>';
+                                
+                            }
+                            
                             $htmlrow .= '<p '.$cat_title_color.' class="readmore">More</p>';
                             $htmlrow .= '</div>';
                             $grid->feedsRow[] = $htmlrow;

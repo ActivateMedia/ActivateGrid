@@ -72,7 +72,7 @@ class ActivategridViewCss extends JViewLegacy {
     margin-left: -".$this->gridItemHalfWidth."px !important;
 }\n";
                 $this->css .= ".gridItem .thumb {
-    width: ".$this->gridItemWidth."px !important;
+    width: 100% !important;
     height: ".$this->gridItemWidth."px !important;
     background-size: cover !important;
 }\n";
@@ -104,7 +104,7 @@ class ActivategridViewCss extends JViewLegacy {
                         $explosion = explode("_", $setting->name);
                         $categoryID = $explosion[1];
                         $property = $explosion[0];
-                        $categoryName = strtolower(ActivategridHelper::getCategoryNameByID($categoryID));
+                        $categoryName = strtolower(ActivategridHelper::getCategoryNameByID($categoryID,true));
                         
                         if($property == "cbr") {
                             $cssBranches[$categoryName][] = "
@@ -127,10 +127,12 @@ class ActivategridViewCss extends JViewLegacy {
                            $cssBranches[$categoryName][] = "\r   border-style: solid;";
                            $cssBranches[$categoryName][] = "\r   border-width:".$setting->value."px;";
                        }
+                       else if($property == "cte")
+                                $cssBranchesNested[$categoryName][".text"][] = "\r    color: ".$setting->value.";";
                        else if($property == "cti")
                                 $cssBranchesNested[$categoryName][".category"][] = "\r    color: ".$setting->value.";\r";
                        else if($property == "ca")
-                       {
+                       {                                
                                 $cssBranchesNested[$categoryName][".text a"][] = "\r    color: ".$setting->value.";\r";
                                 $cssBranchesNested[$categoryName]["a"][] = "\r    color: ".$setting->value.";\r";                                
                                 if($categoryName == "twitter")
@@ -164,6 +166,7 @@ class ActivategridViewCss extends JViewLegacy {
                 {                    
                     foreach ($categoryCSSBlock as $categoryCSSNode => $categoryCSSElement)
                     {
+                        //$this->css .= "\r.".$this->gridItemSelector." .".$categoryName." ".$categoryCSSNode. " {";
                         $this->css .= "\r.".$categoryName." ".$categoryCSSNode. " {";
                         foreach ($categoryCSSElement as $cssCode)
                         {
@@ -344,22 +347,5 @@ if(1!=1) {
                 $document->setMimeEncoding("text/css");
                 JFactory::getApplication()->setHeader($mimetype, 'creation-date="'.JFactory::getDate()->toRFC822().'"', true);
                 echo $this->css;
- 
-		// Get the document object.
-//		$document	= JFactory::getDocument();
-//		$vName		= 'css';
-//		$vFormat	= 'raw';
-//
-//		// Get and render the view.
-//		//if ($view = $this->getView($vName, $vFormat))
-//		//{
-//			// Load the filter state.
-//			$app = JFactory::getApplication();
-//
-//			// Push document object into the view.
-//			$view->document = $document;
-//
-//			$view->display();
-		//}
 	}
 }
