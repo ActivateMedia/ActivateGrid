@@ -1,4 +1,4 @@
-activate-grid
+ActivateGrid
 =============
 
 <p>The ActivateGrid component for Joomla! allows you to build highly dynamic pages utilising content directly from your social media accounts. This plugin component aggregates posts from your Facebook, Instagram, Twitter or Storify accounts and displays them in an animated and dynamic grid. It also allows you to integrate Joomla! content articles into the grid using the title and image of each article.</p>
